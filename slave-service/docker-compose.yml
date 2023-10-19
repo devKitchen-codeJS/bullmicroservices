@@ -1,0 +1,14 @@
+version: '3.1'
+services:
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=master
+      - POSTGRES_USER=master
+      - POSTGRES_DB=master
+    volumes:
+      - ./db:/var/lib/postgresql/data
+    ports:
+    - "7070:7070"
+ 
